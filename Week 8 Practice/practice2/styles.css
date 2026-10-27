@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.calc-card {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 24px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+button {
+    padding: 8px 14px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px;
+    margin: 4px;
+}

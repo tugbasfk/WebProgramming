@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fa;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #234567;
+    margin-bottom: 30px;
+}
+
+.animal-counters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.animal-card {
+    background-color: white;
+    border: 1px solid #ccd5df;
+    border-radius: 8px;
+    padding: 20px;
+    width: 180px;
+}
+
+.animal-card h2 {
+    font-size: 20px;
+    color: #234567;
+}
+
+.animal-card p {
+    font-size: 14px;
+}
+
+.animal-card p[id] {
+    font-size: 32px;
+    font-weight: bold;
+    color: #234567;
+}
+
+button {
+    background-color: #2878b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #185580;
+}
+
+.total-box {
+    background-color: #dcecf8;
+    border: 2px solid #2878b5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.total-box h2 {
+    color: #234567;
+}
+
+#totalCount {
+    font-size: 40px;
+    font-weight: bold;
+    color: #185580;
+}

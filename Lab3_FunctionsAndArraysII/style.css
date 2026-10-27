@@ -1,0 +1,33 @@
+body {
+    font-family: Arial;
+    background-color:  white;;
+    margin: 40px;
+}
+
+h1 {
+    color: rgba(0, 90, 139, 0.542);
+}
+
+#gradebook {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+}
+
+table {
+    background-color: white;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}

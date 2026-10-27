@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="timer-card">
+    <h1>Stopwatch</h1>
+    <p class="time-readout"><strong id="timerDisplay">00:00</strong></p>
+    <p id="startedAt">Last started at: --</p>
+
+    <div class="btn-group">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="timerResetBtn">Reset</button>
+    </div>
+
+    <p id="statusMsg" class="status idle">Status: Timer Idle</p>
+</div>
+</body>
+</html>
