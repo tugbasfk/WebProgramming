@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information Finder</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Country Information Finder</h1>
+
+        <p>
+            Search for a country to learn about its
+            capital, population, region, languages, and flag.
+        </p>
+
+        <form id="countryForm">
+            <label for="countryInput">Enter a country name:</label>
+
+            <input
+                type="text"
+                id="countryInput"
+                placeholder="Example: Turkey"
+            >
+
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="message"></p>
+
+        <div id="countryResult"></div>
+
+        <footer>
+            <p>
+                Data provided by
+                <a href="https://countries.dev/" target="_blank" rel="noopener noreferrer">
+                    countries.dev API
+                </a>
+            </p>
+            <p>
+                <a href="https://countries.dev/" target="_blank" rel="noopener noreferrer">
+                    API Documentation
+                </a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

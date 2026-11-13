@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f0fe;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+h1 {
+    color: #2457a7;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #444;
+}
+
+p {
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #2457a7;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #173b73;
+}
+
+#message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#restartButton {
+    background-color: #28a745;
+}
+
+#restartButton:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    input {
+        width: 80%;
+    }
+}
+
+    .progress-container {
+    width: 100%;
+    background-color: lightgray;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#progressBar {
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 5px;
+}
