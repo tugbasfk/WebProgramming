@@ -1,15 +1,16 @@
-//variables to store secret num, attempts, wins, losses 
 let secretNumber = Math.floor(Math.random() * 100) + 1;
+
 let attempts = 10;
 let wins = 0;
 let losses = 0;
 let gameOver = false;
-// Store the player's guesses
+
+
 let game = {
     guesses: []
 };
 
-// Display all guess history
+
 function showHistory() {
 
     let history = "";
@@ -23,7 +24,7 @@ function showHistory() {
     document.getElementById("guessHistory").textContent = history;
 }
 
-// Check the player's guess
+
 function checkGuess() {
 
     if (gameOver == true) {
@@ -34,40 +35,50 @@ function checkGuess() {
 
     let message = document.getElementById("message");
 
-   // Check if the input is empty
-if (document.getElementById("guessInput").value == "") {
-    message.textContent = "Please enter a number.";
-    return;
-}
+    message.className = "normal";
 
-// Check if the number is valid
-if (guess < 1 || guess > 100 || isNaN(guess)) {
-    message.textContent = "Please enter a number between 1 and 100.";
-    return;
-}
 
-// Check if the number is a whole number
-if (guess % 1 != 0) {
-    message.textContent = "Please enter a whole number.";
-    return;
-}
+    if (document.getElementById("guessInput").value == "") {
+
+        message.textContent = "Please enter a number.";
+
+        return;
+    }
+
+
+    if (guess < 1 || guess > 100 || isNaN(guess)) {
+
+        message.textContent = "Please enter a number between 1 and 100.";
+
+        return;
+    }
+
+
+    if (guess % 1 != 0) {
+
+        message.textContent = "Please enter a whole number.";
+
+        return;
+    }
+
 
     game.guesses.push(guess);
 
     showHistory();
 
+
     attempts--;
 
     document.getElementById("attempts").textContent = attempts;
 
-    document.getElementById("progressBar").style.width = (attempts * 10) + "%";
+    document.getElementById("progressBar").value = attempts;
 
-    // Check the guess
+
     if (guess == secretNumber) {
 
         message.textContent = "Correct! You guessed the number!";
 
-        message.style.color = "green";
+        message.className = "correct";
 
         wins++;
 
@@ -76,11 +87,12 @@ if (guess % 1 != 0) {
         gameOver = true;
 
     }
+
     else if (attempts == 0) {
 
         message.textContent = "Game Over! The number was " + secretNumber;
 
-        message.style.color = "red";
+        message.className = "incorrect";
 
         losses++;
 
@@ -89,14 +101,20 @@ if (guess % 1 != 0) {
         gameOver = true;
 
     }
+
     else if (guess > secretNumber) {
 
         message.textContent = "Too high! Try again.";
 
+        message.className = "normal";
+
     }
+
     else {
 
         message.textContent = "Too low! Try again.";
+
+        message.className = "normal";
 
     }
 
@@ -104,7 +122,6 @@ if (guess % 1 != 0) {
 }
 
 
-// Restart the game
 function restartGame() {
 
     secretNumber = Math.floor(Math.random() * 100) + 1;
@@ -119,15 +136,16 @@ function restartGame() {
 
     document.getElementById("attempts").textContent = attempts;
 
-    document.getElementById("progressBar").style.width = "100%";
+    document.getElementById("progressBar").value = 10;
 
     document.getElementById("message").textContent = "";
+
+    document.getElementById("message").className = "normal";
 
     document.getElementById("guessInput").value = "";
 }
 
 
-// Button event listeners
 document.getElementById("guessButton").addEventListener("click", checkGuess);
 
 document.getElementById("restartButton").addEventListener("click", restartGame);

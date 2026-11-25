@@ -17,23 +17,43 @@
 
         <h2>Enter Your Guess</h2>
 
-        <input type="number" id="guessInput" min="1" max="100">
+        <div class="guess-section">
 
-        <button id="guessButton">Submit Guess</button>
+            <input type="number" id="guessInput" min="1" max="100" step="1" aria-label="Enter your guess">
+
+            <button id="guessButton">Submit Guess</button>
+
+        </div>
 
         <p id="message"></p>
 
         <h3>Attempts Remaining: <span id="attempts">10</span></h3>
-        <div class="progress-container">
-        <div id="progressBar"></div>
+
+        <progress id="progressBar" value="10" max="10" aria-label="Remaining attempts"></progress>
+
+        <div class="history-section">
+
+            <h3>Guess History</h3>
+
+            <p id="guessHistory">No guesses yet.</p>
+
         </div>
 
-        <h3>Guess History</h3>
-        <p id="guessHistory">No guesses yet.</p>
-
         <h3>Game Score</h3>
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
+
+        <div class="score-section">
+
+            <div class="win-box">
+                <p>Wins</p>
+                <span id="wins">0</span>
+            </div>
+
+            <div class="loss-box">
+                <p>Losses</p>
+                <span id="losses">0</span>
+            </div>
+
+        </div>
 
         <button id="restartButton">Play Again</button>
 
